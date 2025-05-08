@@ -1,6 +1,8 @@
-# Movie Directory Analyzer
+# `movietool`
 
-A beautiful web-based tool for identifying and managing duplicate video files in movie directories, featuring Catppuccin theming.
+Tool to detect and identify multiple copies of the same movie, and generate a deletion script for the extra copies.
+
+Features [Catppuccin](https://github.com/catppuccin) theming.
 
 ![Catppuccin Theme](https://github.com/daveio/movietool/raw/main/images/catppuccin.webp)
 
@@ -18,26 +20,27 @@ A beautiful web-based tool for identifying and managing duplicate video files in
 ### Requirements
 
 - Python 3.13 or higher
+- [`astral-sh/uv`](https://github.com/astral-sh/uv)
 
 ### Setup
 
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd movie-directory-analyzer
+git clone https://github.com/daveio/movietool.git
+cd movietool
 ```
 
 2. Install dependencies:
 
 ```bash
-pip install flask flask-sqlalchemy gunicorn psycopg2-binary
+uv sync
 ```
 
 3. Run the application:
 
 ```bash
-python main.py
+uv run python main.py
 ```
 
 4. Open your browser and go to the URL printed in the terminal
