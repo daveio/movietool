@@ -17,15 +17,16 @@ runtimes:
     - python@3.10.8
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
+  disabled:
+    - prettier
   ignore:
     - linters:
         - trunk-toolbox
       paths:
         - icon.png
-  disabled:
-    - sourcery
-    - biome
   enabled:
+    - sourcery@1.36.0
+    - biome@1.9.4
     - bandit@1.8.3
     - black@25.1.0
     - isort@6.0.1
@@ -44,7 +45,6 @@ lint:
     - checkov@3.2.416
     - git-diff-check
     - markdownlint@0.44.0
-    - prettier@3.5.3
     - trufflehog@3.88.28
     - yamllint@1.37.1
 actions:

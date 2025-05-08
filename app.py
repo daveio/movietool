@@ -118,13 +118,13 @@ def scan_progress():
 
             # Send any existing logs to catch up
             for log_entry in last_scan_log:
-                yield "data: " + json.dumps(log_entry) + "\n\n"
+                yield f"data: {json.dumps(log_entry)}" + "\n\n"
 
             while True:
                 try:
                     # Get message from queue with timeout
                     event_data = progress_queue.get(timeout=1.0)
-                    yield "data: " + json.dumps(event_data) + "\n\n"
+                    yield f"data: {json.dumps(event_data)}" + "\n\n"
                 except queue.Empty:
                     # If no more messages and scan is complete, end stream
                     if not scan_in_progress:
@@ -195,12 +195,7 @@ def scan():
         # Custom scan progress tracking function
         def update_progress(processed, total, current_file):
             """Update progress for the UI."""
-            if total == 0:
-                percentage = 100
-            else:
-                # Scale the progress from 5% to 95% (pre-scan is 0-5%, post-processing is 95-100%)
-                percentage = 5 + int((processed / total) * 90)
-
+            percentage = 100 if total == 0 else 5 + int((processed / total) * 90)
             # Extract just the filename for cleaner display
             os.path.basename(current_file)
 
