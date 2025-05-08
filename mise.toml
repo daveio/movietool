@@ -8,4 +8,6 @@ env_file = '.env'
 python = { version = '3.13.3' }
 
 [tasks]
-'ping' = { run = 'echo pong' }
+'sync' = { run = 'uv sync' }
+'dev' = { run = 'uv run start.py' }
+'start' = { depends = ['sync', 'dev'] }

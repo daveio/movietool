@@ -19,31 +19,40 @@ Features [Catppuccin](https://github.com/catppuccin) theming.
 
 ### Requirements
 
-- Python 3.13 or higher
+- [`python/cpython`](https://github.com/python/cpython) (3.13 or higher)
 - [`astral-sh/uv`](https://github.com/astral-sh/uv)
+- [`jdx/mise`](https://github.com/jdx/mise)
 
 ### Setup
 
-1. Clone the repository:
+1. Clone the repository.
 
 ```bash
 git clone https://github.com/daveio/movietool.git
 cd movietool
 ```
 
-2. Install dependencies:
+2. Install dependencies and run the application.
 
 ```bash
-uv sync
+mise start
 ```
 
-3. Run the application:
+4. Visit the URL printed in the terminal.
+
+### Development
+
+You can optionally just install the dependencies.
 
 ```bash
-uv run python main.py
+mise sync
 ```
 
-4. Open your browser and go to the URL printed in the terminal
+Then you can run the application in development mode.
+
+```bash
+mise dev
+```
 
 ## Usage
 
