@@ -11,3 +11,4 @@ python = { version = '3.13.3' }
 'start' = { run = 'uv run start.py' }
 'reset' = { run = 'rm instance/*.db' }
 'install' = { run = 'uv sync' }
+foo
