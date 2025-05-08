@@ -1,0 +1,8 @@
+#Ignore cursor AI rules
+.cursor/rules/codacy.mdc
+
+# Database
+instance/
+
+# Cursor cruft
+.history/

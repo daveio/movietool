@@ -1,0 +1,11 @@
+[env]
+MOVIETOOL_MISE_ACTIVE = 'true'
+
+[settings]
+env_file = '.env'
+
+[tools]
+python = { version = '3.13.3' }
+
+[tasks]
+'ping' = { run = 'echo pong' }
