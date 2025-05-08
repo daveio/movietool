@@ -32,26 +32,26 @@ git clone https://github.com/daveio/movietool.git
 cd movietool
 ```
 
-2. Install dependencies and run the application.
+2. Install dependencies.
+
+```bash
+mise install
+```
+
+3. Start the application.
 
 ```bash
 mise start
 ```
 
-4. Visit the URL printed in the terminal.
+4. Visit the URL printed to the terminal.
 
 ### Development
 
-You can optionally just install the dependencies.
+You can reset the database (ie, delete the SQLite file).
 
 ```bash
-mise sync
-```
-
-Then you can run the application in development mode.
-
-```bash
-mise dev
+mise reset
 ```
 
 ## Usage

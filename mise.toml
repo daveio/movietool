@@ -8,6 +8,6 @@ env_file = '.env'
 python = { version = '3.13.3' }
 
 [tasks]
-'sync' = { run = 'uv sync' }
-'dev' = { run = 'uv run start.py' }
-'start' = { depends = ['sync', 'dev'] }
+'start' = { run = 'uv run start.py' }
+'reset' = { run = 'rm instance/*.db' }
+'install' = { run = 'uv sync' }
