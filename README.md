@@ -2,7 +2,7 @@
 
 A beautiful web-based tool for identifying and managing duplicate video files in movie directories, featuring Catppuccin theming.
 
-![Movie Directory Analyzer Screenshot](https://github.com/catppuccin/catppuccin/raw/main/assets/previews/preview.webp)
+![Catppuccin Theme](https://github.com/daveio/movietool/raw/main/images/catppuccin.webp)
 
 ## Features
 
